@@ -1,12 +1,12 @@
 import numpy
-def gs_cofficient(v1, v2):          #calculate the projection scalar <v1, v2>/<v1, v1>
+def gs_coefficient(v1, v2):          #calculate the projection scalar <v1, v2>/<v1, v1>
     return numpy.dot(v2, v1) / numpy.dot(v1, v1)
 
-def multiply(cofficient, v):        #scalar multiplification
+def multiply(coefficient, v):        #scalar multiplification
     return map((lambda x : x * coefficient), v)   
 
 def proj(v1, v2):                   #calculate the projection vector
-    return multiply(gs_cofficient(v1, v2) , v1)  #(<v1, v2>/<v1, v1>) * v1
+    return multiply(gs_coefficient(v1, v2) , v1)  #(<v1, v2>/<v1, v1>) * v1
 
 def gram_schmidts(X):
     Y = []
@@ -19,6 +19,7 @@ def gram_schmidts(X):
     return Y
 
 def normalize_list(X):              #calculate the normalization of the vector
+    if (not numpu.any(X)): return X
     normalized_vector = X / numpy.linalg.norm(X)
     return normalized_vector
 
