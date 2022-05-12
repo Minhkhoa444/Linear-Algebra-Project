@@ -19,7 +19,7 @@ def gram_schmidts(X):
     return Y
 
 def normalize_list(X):              #calculate the normalization of the vector
-    if (not numpu.any(X)): return X
+    if (not numpy.any(X)): return X
     normalized_vector = X / numpy.linalg.norm(X)
     return normalized_vector
 
