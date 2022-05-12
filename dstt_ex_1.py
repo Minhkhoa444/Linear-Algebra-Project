@@ -1,7 +1,7 @@
 import numpy
 
-def multiply(cofficient, v):        #scalar multiplification
-    return map((lambda x : x * cofficient), v)
+def multiply(coefficient, v):        #scalar multiplification
+    return map((lambda x : x * coefficient), v)
 
 def orthogonal_projection(plane, points, d, n):
     unit_normal_scalar = 1 / numpy.sqrt(numpy.dot(plane, plane))
