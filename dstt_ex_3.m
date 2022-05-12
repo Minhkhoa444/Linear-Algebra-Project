@@ -1,11 +1,6 @@
 clc; clear;
 syms x;
 mat_A = input('Input the square matrix: ');
-%test mat is:  
-% [1, 2; -2, 1]
-% [3, 1, 1; 2, 4, 2; 1, 1, 3] %2 equal eigenvectors
-% [15, -18, -16; 9, -12, -8; 4, -4, -6]
-% [2, 0, 0; 0, 4, 0; 1, 0, 2]
 disp('A = ');
 disp(mat_A);
 [n, n_] = size(mat_A);    %get the size of matrix A
