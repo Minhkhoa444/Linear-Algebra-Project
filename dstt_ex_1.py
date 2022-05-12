@@ -15,7 +15,7 @@ def main():
     print("Input coordinates of points: ")
     points = numpy.array([float(x) for x in input().split()]) 
     points = points.reshape(n, 3)
-    print("Input a, b, c, d (ax+by+cz-d=0): ")
+    print("Input a, b, c, d (ax+by+cz+d=0): ")
     a = float(input("a = "))
     b = float(input("b = "))
     c = float(input("c = "))
