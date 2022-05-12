@@ -27,7 +27,7 @@ def main():
     m = int(input("Enter the amount of vectors: "))
     n = int(input("Enter the dimension of vector space: "))
     print("Input the vectors:", end = " ")
-    arr = numpy.array([int(x) for x in input().split()]) 
+    arr = numpy.array([float(x) for x in input().split()]) 
     arr = arr.reshape(m,n)
     gs_array = numpy.array(gram_schmidts(arr))
     print("The orthogonal basis of the vectors:")
